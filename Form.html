@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Purchase your shirts </title>
+
+    </head>
+    <body style="background: url(Images/SickGuitar.jpg);">
+        <!--The link to the index page-->
+        <a href="index.html">Go to home</a> <br/>
+
+        <!--The cool rocker picture at the heading-->
+        <div style="height: 100; width: 10%; float: left;">
+            <img src="Images/Rocker.jpg" height="111"/>
+        </div>
+
+        <!--The title heading-->
+        <div style="height: 100; background-color: darkred; width: 90%; float:right;">
+            <h1 style="text-align: center; color: red;"> Purchase Form</h1>
+            <h2 style="text-align: center;">Black Metal Music Center</h2>
+        </div>
+
+        <div style="background-color: aliceblue; border-style: solid; border-color: darkgreen; margin-top: 150px;">
+            <h3 style="margin-left: 10px;">GIVE US YOUR MONEY</h3>
+            
+                <p style="margin-left: 10px;">Our shirts:</p>
+                <input type="checkbox" id="dgs_shirt" name="shirts" value="dgs_shirt">
+                <label for="dgs_shirt">Demi-God Slut shirt</label><br/>
+                <input type="checkbox" id="cof_shirt" name="shirts" value="cof_shirt">
+                <label for="cof_shirt">Chasm of Filth shirt</label><br/>
+                <input type="checkbox" id="md_shirt" name="shirts" value="md_shirt">
+                <label for="md_shirt">Maggot Desecration shirt</label><br/>
+                <input type="checkbox" id="gop_shirt" name="shirts" value="gop_shirt">
+                <label for="gop_shirt">Graves of Piss shirt</label><br/>
+                <input type="checkbox" id="nsp_shirt" name="shirts" value="nsp_shirt">
+                <label for="nsp_shirt">Ninja Sex Party shirt</label><br/>
+
+                <p style="margin-left: 10px;">Shirt size:</p>
+                <input type="radio" id="small_size" name="sizes" value="small">
+                <label for="small_size">Small</label><br/>
+                <input type="radio" id="med_size" name="sizes" value="medium">
+                <label for="med_size">Medium</label><br/>
+                <input type="radio" id="large_size" name="sizes" value="large">
+                <label for="large_size">Large</label><br/>
+                <input type="radio" id="xlarge_size" name="sizes" value="xlarge">
+                <label for="xlarge_size">Extra Large</label><br/>
+
+                <p style="margin-left: 10px;">Shirt color:</p>
+                <input style="margin-left: 10px;" type="color" id="shirt_color" name="color">
+
+                <p style="margin-left: 10px;">Our CDs:</p>
+                <input type="checkbox" id="dgs_cd" name="cds" value="dgs_cd">
+                <label for="dgs_cd">Demi-God Slut shirt</label><br/>
+                <input type="checkbox" id="cof_cd" name="cds" value="cof_cd">
+                <label for="cof_cd">Chasm of Filth shirt</label><br/>
+                <input type="checkbox" id="md_cd" name="cds" value="md_cd">
+                <label for="md_cd">Maggot Desecration shirt</label><br/>
+                <input type="checkbox" id="gop_cd" name="cds" value="gop_cd">
+                <label for="gop_cd">Graves of Piss shirt</label><br/>
+                <input type="checkbox" id="nsp_cd" name="cds" value="nsp_cd">
+                <label for="nsp_cd">Ninja Sex Party shirt</label><br/>
+
+                <p style="margin-left: 10px;">Your credit card information:</p>
+                <label for="credit_number" style="margin-left: 10px;">Credit card number : </label>
+                <input type="text" id="credit_number" name="credit_card"><br/>
+                <label for="credit_number" style="margin-left: 10px;">CVV numbers :&emsp;&emsp;&nbsp;&nbsp; </label> 
+                <input type="text" id="credit_cvv" name="credit_card"><br/>
+                <label for="credit_date" style="margin-left: 10px;">Expiration date :&emsp;&emsp;</label> 
+                <select id="credit_month" name="credit_card">
+                    <option value="01">Jan (01)</option>
+                    <option value="02">Feb (02)</option>
+                    <option value="03">Mar (03)</option>
+                    <option value="04">Apr (04)</option>
+                    <option value="05">May (05)</option>
+                    <option value="06">Jun (06)</option>
+                    <option value="07">Jul (07)</option>
+                    <option value="08">Aug (08)</option>
+                    <option value="09">Sep (09)</option>
+                    <option value="10">Oct (10)</option>
+                    <option value="11">Nov (11)</option>
+                    <option value="12">Dec (12)</option>
+                </select>
+                <select id="credit_year" name="credit_card">
+                    <option value="26">2026 (26)</option>
+                    <option value="27">2027 (27)</option>
+                    <option value="28">2028 (28)</option>
+                    <option value="29">2029 (29)</option>
+                </select>
+                <br/>
+                <label for="credit_name" style="margin-left: 10px;">Name on the card :&nbsp;&nbsp;</label>
+                <input type="text" id="credit_name" name="credit_card" pattern=""><br/>
+                <br/>
+                <input type="submit" style="margin-left: 50px; margin-bottom: 15px;">
+            </form>
+        </div>
+    </body>
+</html>
