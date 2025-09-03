@@ -20,9 +20,11 @@
             <h2 style="text-align: center;">Black Metal Music Center</h2>
         </div>
 
+        <!--Beginning of the form-->
         <div style="background-color: aliceblue; border-style: solid; border-color: darkgreen; margin-top: 150px;">
             <h3 style="margin-left: 10px;">GIVE US YOUR MONEY</h3>
-            
+
+                <!--Shirt menu-->
                 <p style="margin-left: 10px;">Our shirts:</p>
                 <input type="checkbox" id="dgs_shirt" name="shirts" value="dgs_shirt">
                 <label for="dgs_shirt">Demi-God Slut shirt</label><br/>
@@ -35,6 +37,7 @@
                 <input type="checkbox" id="nsp_shirt" name="shirts" value="nsp_shirt">
                 <label for="nsp_shirt">Ninja Sex Party shirt</label><br/>
 
+                <!--Shirt size menu-->
                 <p style="margin-left: 10px;">Shirt size:</p>
                 <input type="radio" id="small_size" name="sizes" value="small">
                 <label for="small_size">Small</label><br/>
@@ -45,9 +48,11 @@
                 <input type="radio" id="xlarge_size" name="sizes" value="xlarge">
                 <label for="xlarge_size">Extra Large</label><br/>
 
+                <!--Shirt color menu-->
                 <p style="margin-left: 10px;">Shirt color:</p>
                 <input style="margin-left: 10px;" type="color" id="shirt_color" name="color">
 
+                <!--CD menu-->
                 <p style="margin-left: 10px;">Our CDs:</p>
                 <input type="checkbox" id="dgs_cd" name="cds" value="dgs_cd">
                 <label for="dgs_cd">Demi-God Slut shirt</label><br/>
@@ -60,6 +65,7 @@
                 <input type="checkbox" id="nsp_cd" name="cds" value="nsp_cd">
                 <label for="nsp_cd">Ninja Sex Party shirt</label><br/>
 
+                <!--Credit card information menu-->
                 <p style="margin-left: 10px;">Your credit card information:</p>
                 <label for="credit_number" style="margin-left: 10px;">Credit card number : </label>
                 <input type="text" id="credit_number" name="credit_card" pattern="[0-9]{16}" placeholder="################" onblur="requiredField(document.getElementById('credit_warning'))">
