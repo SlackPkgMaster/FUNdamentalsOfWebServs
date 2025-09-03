@@ -3,15 +3,56 @@
 <html>
     <head>
         <title> My first website </title>
+        <script>
+            var toggleText = false;
+            var toggleBkg = false;
+            function changeText() {
+                toggleText = !toggleText;
+                element = document.getElementById("ourJourney");
+                if (toggleText) {
+                    element.innerHTML = "<h2>GET YOUR CURSOR OUTTA HERE</h2>";
+                }
+                else {
+                    element.innerHTML = 
+                    "We are a group of incredibly passionate and truly satanic metal enthusiasts. " +
+                    "We have decided to come together and pay some graphic designer 20$ to create " +
+                    "our website, which we are using to grow our community and sell second-hand " +
+                    "t-shirts and music CDs. If you're interested in joining, be sure to give us " +
+                    "your credit card information and put this website in your favourites. Happy " +
+                    "shopping!";
+                }
+            }
+            function changeHeaderImg() {
+                document.getElementById("headerImg").src = "Images/Rocker2.jpg";
+            }
+            function changeBackground(newBkg) {
+                toggleBkg = !toggleBkg;
+                if (toggleBkg){
+                    document.getElementById("backgroundImg").style.background = "url(" + newBkg + ")";
+                }
+                else {
+                    document.getElementById("backgroundImg").style.background = "url(Images/SickGuitar.jpg)";
+                }
+            }
+            function changeButtonText(buttonElement) {
+                if (toggleBkg){
+                    buttonElement.innerHTML = "Reset the background";
+                }
+                else
+                {
+                    buttonElement.innerHTML = "Change the background";
+                }
+            }
+        </script>
 
     </head>
-    <body style="background: url(Images/SickGuitar.jpg);">
+    <body style="background: url(Images/SickGuitar.jpg);" id="backgroundImg">
         <!--The link to the purchase form page-->
         <a href="Form.html">Go to your purchase form</a> <br/>
 
         <!--The cool rocker picture at the heading-->
         <div style="height: 100; width: 10%; float: left;">
-            <img src="Images/Rocker.jpg" height="111"/>
+            <img id="headerImg" src="Images/Rocker.jpg" height="111" onclick="changeHeaderImg()"/>
         </div>
 
         <!--The title heading-->
@@ -23,7 +64,7 @@
         <!--The journey section-->
         <div style="background-color: aliceblue; border-style: solid; border-color: brown; margin-top: 150px;">
             <h3 style="margin-left: 10px;">Our Journey</h3>
-            <p style="margin-left: 10px;">
+            <p style="margin-left: 10px;" id="ourJourney" onclick="changeText()">
                 We are a group of incredibly passionate and truly satanic metal enthusiasts.
                 We have decided to come together and pay some graphic designer 20$ to create
                 our website, which we are using to grow our community and sell second-hand
@@ -56,5 +97,7 @@
             <br/>
             <a href="Form.html" style="margin-left: 10px;" target="_blank">Buy our second-hand shirts</a>
         </div>
+        <br/>
+        <button onclick="changeBackground('Images/SickVinyl.jpg'); changeButtonText(this)">Change the background</button>
     </body>
 </html>
