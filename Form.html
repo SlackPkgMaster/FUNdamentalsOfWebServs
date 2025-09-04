@@ -81,9 +81,11 @@
                 <!--Credit card information menu-->
                 <p style="margin-left: 10px;">Your credit card information:</p>
                 <label for="credit_number" style="margin-left: 10px;">Credit card number : </label>
-                <input type="text" id="credit_number" name="credit_card" pattern="[0-9]{16}" placeholder="################"><br/>
+                <input type="text" id="credit_number" name="credit_card" pattern="[0-9]{16}" placeholder="################" onblur="requiredField(document.getElementById('credit_warning'))">
+                <span id="credit_warning" style="color: red"></span><br/>
                 <label for="credit_number" style="margin-left: 10px;">CVV numbers :&emsp;&emsp;&nbsp;&nbsp; </label> 
-                <input type="text" id="credit_cvv" name="credit_card" pattern="[0-9]{3}" placeholder="###"><br/>
+                <input type="text" id="credit_cvv" name="credit_card" pattern="[0-9]{3}" placeholder="###" onblur="requiredField(document.getElementById('cvv_warning'))">
+                <span id="cvv_warning" style="color: red"></span><br/>
                 <label for="credit_date" style="margin-left: 10px;">Expiration date :&emsp;&emsp;</label> 
                 <select id="credit_month" name="credit_card">
                     <option value="01">Jan (01)</option>
@@ -107,11 +109,17 @@
                 </select>
                 <br/>
                 <label for="credit_name" style="margin-left: 10px;">Name on the card :&nbsp;&nbsp;</label>
-                <input type="text" id="credit_name" name="credit_card"><br/>
+                <input type="text" id="credit_name" name="credit_card" onblur="requiredField(document.getElementById('name_warning'))">
+                <span id="name_warning" style="color: red"></span><br/>
                 <br/>
-                <!--Submit button-->
-                <input type="submit" style="margin-left: 30px; margin-bottom: 15px;">
+                <input type="Submit" onclick="alert('Thank you for your purchase')" style="margin-left: 30px; margin-bottom: 15px;">
             </form>
         </div>
+
+        <script>
+            function requiredField(fieldElement) {
+                fieldElement.innerHTML = "This field is required";
+            }
+        </script>
     </body>
 </html>
