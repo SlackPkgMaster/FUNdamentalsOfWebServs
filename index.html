@@ -3,25 +3,37 @@
 <html>
     <head>
         <title> My first website </title>
+        <style>
+            .body_blocks{
+                width:80%;
+                margin:auto;
+                margin-top:25px;
+                margin-bottom:25px;
+                padding:10px;
+                border-style:solid;
+                background-color: aliceblue;
+            }
 
+        </style>
     </head>
     <body style="background: url(Images/SickGuitar.jpg);">
         <!--The link to the purchase form page-->
         <a href="Form.html">Go to your purchase form</a> <br/>
 
-        <!--The cool rocker picture at the heading-->
-        <div style="height: 100; width: 10%; float: left;">
-            <img src="Images/Rocker.jpg" height="111"/>
-        </div>
+        <div style="display:flex; margin:0px">
+            <!--The cool rocker picture at the heading-->
+            <div style="height: 100; width: 10%; float: left; margin:0px">
+                <img src="Images/Rocker.jpg" style="height:100%; width:100%"/>
+            </div>
 
-        <!--The title heading-->
-        <div style="height: 100; background-color: darkred; width: 90%; float:right;">
-            <h1 style="text-align: center; color: red;"> Welcome to The Jungle</h1>
-            <h2 style="text-align: center;">Black Metal Music Center</h2>
+            <!--The title heading-->
+            <div style="height: 100; background-color: darkred; width: 90%; float:left; margin:0px;">
+                <h1 style="text-align: center; color: rgb(49, 13, 13);"> Welcome to The Jungle</h1>
+                <h2 style="text-align: center;">Black Metal Music Center</h2>
+            </div>
         </div>
-
         <!--The journey section-->
-        <div style="background-color: aliceblue; border-style: solid; border-color: brown; margin-top: 150px;">
+        <div style="border-color: brown" class="body_blocks">
             <h3 style="margin-left: 10px;">Our Journey</h3>
             <p style="margin-left: 10px;">
                 We are a group of incredibly passionate and truly satanic metal enthusiasts.
@@ -34,7 +46,7 @@
         </div>
 
         <!--The allowed bands section-->
-        <div style="background-color: aliceblue; border-style: solid; border-color: crimson; margin-top: 50px;">
+        <div style="border-color: crimson" class="body_blocks">
             <h3 style="margin-left: 10px;">Allowed Bands</h3>
             <p style="margin-left: 10px;"> Here are some of the bands you are allowed to be into:</p>
             <ul>
@@ -48,7 +60,7 @@
         </div>
 
         <!--The references section-->
-        <div style="background-color: aliceblue; border-style: solid; border-color:rgb(255, 85, 85); margin-top: 50px; padding-bottom: 15px;">
+        <div style="border-color:rgb(255, 85, 85)" class="body_blocks">
             <h3 style="margin-left: 10px;">References</h3>
             <a href="https://en.wikipedia.org/wiki/Death" style="margin-left: 10px;" target="_blank">The core of our mission</a>
             <br/>
@@ -56,5 +68,6 @@
             <br/>
             <a href="Form.html" style="margin-left: 10px;" target="_blank">Buy our second-hand shirts</a>
         </div>
+        <br/>
     </body>
 </html>
