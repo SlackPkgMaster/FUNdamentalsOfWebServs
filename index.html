@@ -53,14 +53,54 @@
         </script>
 
         <style>
+            h1,h2,h3 {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .headingimage {
+                height: 120px; 
+                width: 10%; 
+                float: left; 
+                margin:0px;
+            }
+            .headingtitle {
+                height: 120px; 
+                background-color: rgba(139, 0, 0, 0.95); 
+                width: 90%; 
+                float:left; 
+                margin:0px;
+            }
+            .headingtitle h1,h2 {
+                text-align: center;
+            }
+            .navbar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgba(127, 127, 127, 0.7);
+            }
+            .navbar li {
+                float: left;
+            }
+            .navbar li a {
+                display: block;
+                color: rgb(164, 11, 11);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            ul li a:hover {
+                color: crimson;
+                background-color: #111111;
+            }
             .body_blocks{
                 width:80%;
                 margin:auto;
                 margin-top:25px;
                 margin-bottom:25px;
-                padding:10px;
+                padding: 10px 20px;
                 border-style:solid;
-                background-color: aliceblue;
+                background-color: rgba(240, 248, 255, 0.9);
             }
 
         </style>
@@ -71,20 +111,26 @@
 
         <div style="display:flex; margin:0px">
             <!--The cool rocker picture at the heading-->
-            <div style="height: 100; width: 10%; float: left; margin:0px">
+            <div class="headingimage">
                 <img id="headerImg" src="Images/Rocker.jpg" style="height:100%; width:100%" onclick="changeHeaderImg()"/>
             </div>
 
             <!--The title heading-->
-            <div style="height: 100; background-color: darkred; width: 90%; float:left; margin:0px;">
-                <h1 style="text-align: center; color: rgb(49, 13, 13);"> Welcome to The Jungle</h1>
-                <h2 style="text-align: center;">Black Metal Music Center</h2>
+            <div class="headingtitle">
+                <h1 style="color: rgb(49, 13, 13);"> Welcome to The Jungle</h1>
+                <h2>Black Metal Music Center</h2>
             </div>
         </div>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Form.html">Shop</a></li>
+        </ul>
+
         <!--The journey section-->
         <div style="border-color: brown" class="body_blocks">
-            <h3 style="margin-left: 10px;">Our Journey</h3>
-            <p style="margin-left: 10px;" id="ourJourney" onclick="changeText()">
+            <h3>Our Journey</h3>
+            <p id="ourJourney" onclick="changeText()">
                 We are a group of incredibly passionate and truly satanic metal enthusiasts.
                 We have decided to come together and pay some graphic designer 20$ to create
                 our website, which we are using to grow our community and sell second-hand
@@ -96,8 +142,8 @@
 
         <!--The allowed bands section-->
         <div style="border-color: crimson" class="body_blocks">
-            <h3 style="margin-left: 10px;">Allowed Bands</h3>
-            <p style="margin-left: 10px;"> Here are some of the bands you are allowed to be into:</p>
+            <h3>Allowed Bands</h3>
+            <p> Here are some of the bands you are allowed to be into:</p>
             <ul>
                 <li>Demi-God Slut</li>
                 <li>Chasm of Filth</li>
@@ -105,25 +151,25 @@
                 <li>Graves of Piss</li>
                 <li>Ninja Sex Party</li>
             </ul>
-            <p style="margin-left: 10px;">If you like any other band, please don't visit our website anymore.</p>
+            <p>If you like any other band, please don't visit our website anymore.</p>
         </div>
 
         <!--The references section-->
         <div style="border-color:rgb(255, 85, 85)" class="body_blocks">
-            <h3 style="margin-left: 10px;">References</h3>
-            <a href="https://en.wikipedia.org/wiki/Death" style="margin-left: 10px;" target="_blank">The core of our mission</a>
+            <h3>References</h3>
+            <a href="https://en.wikipedia.org/wiki/Death" target="_blank">The core of our mission</a>
             <br/>
-            <a href="https://en.wikipedia.org/wiki/Lockheed_Martin" style="margin-left: 10px;" target="_blank">Our sponsor</a>
+            <a href="https://en.wikipedia.org/wiki/Lockheed_Martin" target="_blank">Our sponsor</a>
             <br/>
-            <a href="Form.html" style="margin-left: 10px;" target="_blank">Buy our second-hand shirts</a>
+            <a href="Form.html" target="_blank">Buy our second-hand shirts</a>
         </div>
         <br/>
         <button onclick="changeBackground('Images/SickVinyl.jpg'); changeButtonText(this)">Change the background</button>
         <br/><br/>
         <button onclick="hiddenDiv(hidden_div)">DO NOT click me</button>
         <div id="hidden_div" style="display: none; border-color:rgb(255, 154, 154)" class="body_blocks">
-            <h3 style="margin-left: 10px;">Hidden Element</h3>
-            <p style="margin-left: 10px;">
+            <h3>Hidden Element</h3>
+            <p>
                 Noooo now you know our secret!!!
             </p>
         </div>

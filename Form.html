@@ -5,6 +5,46 @@
         <title> Purchase your shirts </title>
 
         <style>
+            h1,h2,h3 {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .headingimage {
+                height: 120px; 
+                width: 10%; 
+                float: left; 
+                margin:0px;
+            }
+            .headingtitle {
+                height: 120px; 
+                background-color: rgba(139, 0, 0, 0.95); 
+                width: 90%; 
+                float:left; 
+                margin:0px;
+            }
+            .headingtitle h1,h2 {
+                text-align: center;
+            }
+            .navbar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgba(127, 127, 127, 0.7);
+            }
+            .navbar li {
+                float: left;
+            }
+            .navbar li a {
+                display: block;
+                color: rgb(164, 11, 11);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            ul li a:hover {
+                color: crimson;
+                background-color: #111111;
+            }
             .body_blocks{
                 width:80%;
                 margin:auto;
@@ -12,7 +52,7 @@
                 margin-bottom:25px;
                 padding:10px;
                 border-style:solid;
-                background-color: aliceblue;
+                background-color: rgba(240, 248, 255, 0.9);
             }
         </style>
     </head>
@@ -22,16 +62,21 @@
 
         <div style="display:flex; margin:0px">
             <!--The cool rocker picture at the heading-->
-            <div style="height: 100; width: 10%; float: left; margin:0px">
+            <div class="headingimage">
                 <img src="Images/Rocker.jpg" style="height:100%; width:100%"/>
             </div>
 
             <!--The title heading-->
-            <div style="height: 100; background-color: darkred; width: 90%; float:left; margin:0px;">
-                <h1 style="text-align: center; color: rgb(49, 13, 13);"> Welcome to The Jungle</h1>
-                <h2 style="text-align: center;">Black Metal Music Center</h2>
+            <div class="headingtitle">
+                <h1 style="color: rgb(49, 13, 13);"> Welcome to The Jungle</h1>
+                <h2>Purchase Form</h2>
             </div>
         </div>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Form.html">Shop</a></li>
+        </ul>
 
         <!--Beginning of the form-->
         <div style="border-color: darkgreen" class="body_blocks">
