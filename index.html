@@ -53,6 +53,10 @@
         </script>
 
         <style>
+            @font-face {
+                font-family: ComicSans;
+                src: url(Fonts/ComicRelief-Regular.ttf);
+            }
             h1,h2,h3 {
                 font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             }
@@ -81,6 +85,7 @@
             }
             .navbar li {
                 float: left;
+                font-family: ComicSans;
             }
             .navbar li a {
                 display: block;
@@ -102,7 +107,16 @@
                 border-style:solid;
                 background-color: rgba(240, 248, 255, 0.9);
             }
-
+            button {
+                width:90%;
+                height:25px;
+                display: block;
+                margin: 0 auto;
+            }
+            button:hover {
+                background-color: rgb(55, 55, 55);
+                color: aliceblue;
+            }
         </style>
     </head>
     <body style="background: url(Images/SickGuitar.jpg);" id="backgroundImg">
@@ -164,8 +178,8 @@
             <a href="Form.html" target="_blank">Buy our second-hand shirts</a>
         </div>
         <br/>
-        <button onclick="changeBackground('Images/SickVinyl.jpg'); changeButtonText(this)">Change the background</button>
-        <br/><br/>
+        <button class="background_button" onclick="changeBackground('Images/SickVinyl.jpg'); changeButtonText(this)">Change the background</button>
+        <br/>
         <button onclick="hiddenDiv(hidden_div)">DO NOT click me</button>
         <div id="hidden_div" style="display: none; border-color:rgb(255, 154, 154)" class="body_blocks">
             <h3>Hidden Element</h3>
