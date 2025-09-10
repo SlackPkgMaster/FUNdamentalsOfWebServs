@@ -1,0 +1,2 @@
+<h1>THIS IS A MESSAGE FROM THE SERVER</h1>
+Have a good day :)

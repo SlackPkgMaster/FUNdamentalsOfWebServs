@@ -6,6 +6,7 @@
         <script>
             var toggleText = false;
             var toggleBkg = false;
+            var toggleTextRandom = false;
             function changeText() {
                 toggleText = !toggleText;
                 element = document.getElementById("ourJourney");
@@ -49,6 +50,19 @@
                 {
                     buttonElement.innerHTML = "Change the background";
                 }
+            }
+            async function getText(file) {
+                toggleTextRandom = !toggleTextRandom;
+                let object = await fetch(file);
+                let fetchedText = await object.text();
+
+                if (toggleTextRandom) {
+                    document.getElementById("randomParagraph").innerHTML = originalText;
+                }
+                else {
+                    document.getElementById("randomParagraph").innerHTML = fetchedText;
+                }
+
             }
         </script>
 
@@ -163,7 +177,7 @@
                 <li>Graves of Piss</li>
                 <li>Ninja Sex Party</li>
             </ul>
-            <p>If you like any other band, please don't visit our website anymore.</p>
+            <p id="randomParagraph" onmouseenter="getText('ExtraContent.txt')">If you like any other band, please don't visit our website anymore.</p>
         </div>
 
         <!--The references section-->
@@ -185,5 +199,8 @@
                 Noooo now you know our secret!!!
             </p>
         </div>
+        <script>
+            var originalText = document.getElementById("randomParagraph").innerHTML;
+        </script>
     </body>
 </html>
