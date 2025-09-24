@@ -6,12 +6,13 @@
     </head>
     <body>
         <h2>Shirts Requested </h2>
-        <?php if (isset($_POST['shirts'])) { ?>
+        <?php if (isset($_POST['shirts'])) : ?>
             <ul>
             <?php foreach ($x as $_POST['shirts']) : ?>
                 <li><?= htmlspecialchars($x) ?>  </li>
                 </ul>
-            <?php endforeach; } ?>
+            <?php endforeach; 
+            endif; ?>
 
         <?= vardump($_POST)?>
     </body>
