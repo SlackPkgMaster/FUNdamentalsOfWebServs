@@ -14,6 +14,6 @@
             <?php endforeach; 
             endif; ?>
 
-        <?= vardump($_POST)?>
+        <?= var_dump($_POST)?>
     </body>
 </html>
