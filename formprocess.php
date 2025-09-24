@@ -7,13 +7,11 @@
     <body>
         <?php if (isset($_POST['shirts'])) {
             $shirts = $_POST['shirts'];
-            echo $shirts;
         } ?>
         <h2>Shirts Requested </h2>
             <ul>
             <?php foreach ($shirts as $x) : ?>
                 <li><?= htmlspecialchars($x) ?>  </li>
-                </ul>
             <?php endforeach ?>
             </ul>
         <?= var_dump($_POST)?>
