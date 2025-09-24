@@ -9,10 +9,9 @@
         <?php if (isset($_POST['shirts'])) { ?>
             <ul>
             <?php foreach ($x as $_POST['shirts']) : ?>
-            <li><?= htmlspecialchars($x) ?>  </li>
-            </ul>
-            <?php endforeach 
-        } ?>
+                <li><?= htmlspecialchars($x) ?>  </li>
+                </ul>
+            <?php endforeach } ?>
 
         <?= vardump($_POST)?>
     </body>
