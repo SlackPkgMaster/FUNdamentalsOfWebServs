@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 
 <html>
-    <head></head>
+    <head>
+        <title>Results</title> 
+    </head>
     <body>
-        <p><?= $_SERVER['HTTP_USER_AGENT'] ?></p>
+        <h2>Shirts Requested </h2>
+        <?php if (isset($_POST['shirts'])) { ?>
+            <ul>
+            <?php foreach ($x as $_POST['shirts']) : ?>
+            <li><?= htmlspecialchars($x) ?>  </li>
+            </ul>
+            <?php endforeach 
+        } ?>
     </body>
 </html>
