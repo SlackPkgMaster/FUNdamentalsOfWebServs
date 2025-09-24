@@ -10,7 +10,7 @@
         } ?>
         <h2>Shirts Requested </h2>
             <ul>
-            <?php foreach ($x as $shirts) : ?>
+            <?php foreach ($shirts as $x) : ?>
                 <li><?= htmlspecialchars($x) ?>  </li>
                 </ul>
             <?php endforeach ?>
