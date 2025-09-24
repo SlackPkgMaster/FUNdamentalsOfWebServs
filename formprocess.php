@@ -11,7 +11,7 @@
             <?php foreach ($x as $_POST['shirts']) : ?>
                 <li><?= htmlspecialchars($x) ?>  </li>
                 </ul>
-            <?php endforeach } ?>
+            <?php endforeach; } ?>
 
         <?= vardump($_POST)?>
     </body>
