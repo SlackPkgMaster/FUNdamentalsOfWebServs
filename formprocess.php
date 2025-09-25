@@ -24,7 +24,6 @@
 	    $credit_cvv = $_POST['credit_cvv'];
 	}
 	if (isset($_POST['credit_month'])){
-		echo (int)$_POST['credit_month'];
 		switch((int)$_POST['credit_month']) {
 			case 1: $credit_month = 'January'; break;
 			case 2: $credit_month = 'February';break;
