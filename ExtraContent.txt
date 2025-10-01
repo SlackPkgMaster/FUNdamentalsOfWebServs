@@ -1,2 +1,1 @@
-<h1>THIS IS A MESSAGE FROM THE SERVER</h1>
-Have a good day :)
+<h1>GET OFF ME</h1>

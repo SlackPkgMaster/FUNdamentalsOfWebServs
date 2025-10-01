@@ -3,6 +3,21 @@
 <html>
     <head>
         <title> Purchase your shirts </title>
+        <script>
+            var toggleBkg = false;
+            function changeHeaderImg() {
+                document.getElementById("headerImg").src = "Images/Rocker2.jpg";
+            }
+            function changeBackground(newBkg) {
+                toggleBkg = !toggleBkg;
+                if (toggleBkg){
+                    document.getElementById("backgroundImg").style.background = "url(" + newBkg + ")";
+                }
+                else {
+                    document.getElementById("backgroundImg").style.background = "url(Images/SickGuitar.jpg)";
+                }
+            }
+        </script>
 
         <style>
             @font-face {
@@ -59,14 +74,24 @@
                 border-style:solid;
                 background-color: rgba(240, 248, 255, 0.9);
             }
+            button {
+                width:80%;
+                height:25px;
+                display: block;
+                margin: 0 auto;
+            }
+            button:hover {
+                background-color: rgb(55, 55, 55);
+                color: aliceblue;
+            }
         </style>
     </head>
-    <body style="background: url(Images/SickGuitar.jpg);padding: 0px;">
+    <body style="background: url(Images/SickGuitar.jpg);padding: 0px;" id="backgroundImg">
 
         <div style="display:flex; margin:0px">
             <!--The cool rocker picture at the heading-->
             <div class="headingimage">
-                <img src="Images/Rocker.jpg" style="height:100%; width:100%"/>
+                <img src="Images/Rocker.jpg" id="headerImg" style="height:100%; width:100%" onclick="changeHeaderImg()"/>
             </div>
 
             <!--The title heading-->
@@ -168,6 +193,8 @@
                 <input type="Submit" onclick="alert('Thank you for your purchase')" style="margin-left: 30px; margin-bottom: 15px;">
             </form>
         </div>
+        <br/>
+        <button class="background_button" onclick="changeBackground('Images/SickVinyl.jpg'); changeButtonText(this)">Change the background</button>
 
         <script>
             function requiredField(fieldElement, warning_id) {
