@@ -193,24 +193,24 @@
 					<?php endforeach ?>
 			</ul>
 
-			<h2>Shirt Size</h2>
+			<h4>Shirt Size</h4>
 			<p>
 				<?= $size ?>
 			</p>
 
-			<h2>Shirt Color Values</h2>
+			<h4>Shirt Color Values</h4>
 			<p>
 				<?= $color ?>
 			</p>
 
-				<h2>CDs Requested </h2>
+				<h4>CDs Requested </h4>
 				<ul>
 					<?php foreach ($cds as $x) : ?>
 					<li><?= $x ?>  </li>
 					<?php endforeach ?>
 			</ul>
 
-			<h2>Credit Card Info</h2>
+			<h4>Credit Card Info</h4>
 			<p>Credit Card Number : <?= $credit_number ?></p>
 			<p>Credit Card CVV : <?= $credit_cvv ?></p>
 			<p>Credit Card Expiration Date : <?= $credit_month . " " . $credit_year ?>
