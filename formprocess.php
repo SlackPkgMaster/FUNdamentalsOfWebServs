@@ -211,14 +211,22 @@
 			</ul>
 
 			<h2>Credit Card Info</h2>
-			<p>Credit Card Number : <?= (int)$credit_number ?></p>
-			<p>Credit Card CVV : <?= (int)$credit_cvv ?></p>
+			<p>Credit Card Number : <?= $credit_number ?></p>
+			<p>Credit Card CVV : <?= $credit_cvv ?></p>
 			<p>Credit Card Expiration Date : <?= $credit_month . " " . $credit_year ?>
 			<p>Name on the Card : <?= $credit_name ?> </p>
 		</div>
 
 		<div style="border-color:magenta" class="body_blocks">
 			<h3>Search the database!</h3>
+<!--			<form action="databasesearch.php" method="get">
+				<label for="table" style="margin-left: 10px;">Database:</label>
+					<select id="table" name="table">
+						<option value="credit_cards">Credit Cards</option>
+						<option value="orders">Orders</option>
+					</select>
+					
+			</form> -->
 		</div>
     </body>
 </html>
