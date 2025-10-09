@@ -146,7 +146,7 @@
 				}
 			}
 			if (isset($_POST['credit_name'])){
-				$credit_name = $_POST['credit_name'];
+				$credit_name = htmlspecialchars($_POST['credit_name']);
 			}
 			else {$credit_name = '';}
 			
