@@ -75,6 +75,7 @@
 			$password = "Ross1234";
 			$database = "order_info";
 			$conn = mysqli_connect($server, $username, $password, $database); 
+
 			// Check for successful connection
 			if (!$conn) {
 				die("Connection Failed: {mysqli_connect_error()}");
@@ -147,7 +148,7 @@
 			else {$credit_name = '';}
 			
 			//Making the SQL query
-			$sql_query = "insert into credit_cards (
+			$sql_credit_query = "insert into credit_cards (
 					credit_number, 
 					cvv,
 					exp_month,
@@ -160,7 +161,19 @@
 					{$credit_month},
 					{$credit_year},
 					{$credit_name}
-				)"
+				);";
+			
+			$sql_credit_result = mysqli_query($conn,$sql_credit_query);
+
+			$sql_credit_id_query = "select id from credit_cards
+				where 	credit_number={$credit_number} and
+						cvv={$credit_cvv} and
+						exp_month={$credit_month} and
+						exp_year={$credit_year} and
+						name={$credit_name};";
+			
+			$credit_id = mysqli_query($conn, $sql_credit_id_query);
+			
 		?>
     </head>
     <body style="background: url(Images/SickGuitar.jpg);padding: 0px;">
@@ -219,6 +232,7 @@
 
 		<div style="border-color:magenta" class="body_blocks">
 			<h3>Search the database!</h3>
+			<?= $credit_id?>
 <!--			<form action="databasesearch.php" method="get">
 				<label for="table" style="margin-left: 10px;">Database:</label>
 					<select id="table" name="table">
