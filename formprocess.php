@@ -152,15 +152,8 @@
 				values ( '{$credit_number}', {$credit_cvv}, '{$credit_month}', '{$credit_year}', '{$credit_name}' );";
 			
 			$sql_credit_result = mysqli_query($conn,$sql_credit_query);
-
-			$sql_credit_id_query = "select id from credit_cards
-				where 	credit_number='{$credit_number}' and
-						cvv={$credit_cvv} and
-						exp_month='{$credit_month}' and
-						exp_year='{$credit_year}' and
-						name='{$credit_name}';";
 			
-			$credit_id = mysqli_query($conn, $sql_credit_id_query);
+			$credit_id = mysqli_insert_id($conn);
 
 					
 		?>
@@ -221,7 +214,7 @@
 
 		<div style="border-color:magenta" class="body_blocks">
 			<h3>Search the database!</h3>
-			<?= $credit_id['id'] ?>
+			<?= $credit_id ?>
 
 			<?php mysqli_close($conn) ?>
 <!--			<form action="databasesearch.php" method="get">
