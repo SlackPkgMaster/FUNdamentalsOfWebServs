@@ -151,29 +151,17 @@
 			else {$credit_name = '';}
 			
 			//Making the SQL query
-			$sql_credit_query = "insert into credit_cards (
-					credit_number, 
-					cvv,
-					exp_month,
-					exp_year,
-					name
-				)
-				values (
-					{$credit_number},
-					{$credit_cvv},
-					{$credit_month},
-					{$credit_year},
-					{$credit_name}
-				);";
+			$sql_credit_query = "insert into credit_cards ( credit_number, cvv, exp_month, exp_year, name )
+				values ( '{$credit_number}', {$credit_cvv}, '{$credit_month}', '{$credit_year}', '{$credit_name}' );";
 			
 			$sql_credit_result = mysqli_query($conn,$sql_credit_query);
 
 			$sql_credit_id_query = "select id from credit_cards
-				where 	credit_number={$credit_number} and
+				where 	credit_number='{$credit_number}' and
 						cvv={$credit_cvv} and
-						exp_month={$credit_month} and
-						exp_year={$credit_year} and
-						name={$credit_name};";
+						exp_month='{$credit_month}' and
+						exp_year='{$credit_year}' and
+						name='{$credit_name}';";
 			
 			$credit_id = mysqli_query($conn, $sql_credit_id_query);
 					
