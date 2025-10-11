@@ -152,10 +152,33 @@
 				values ( '{$credit_number}', {$credit_cvv}, '{$credit_month}', '{$credit_year}', '{$credit_name}' );";
 			
 			$sql_credit_result = mysqli_query($conn,$sql_credit_query);
-			
-			$credit_id = mysqli_insert_id($conn);
 
-					
+			if($sql_credit_result) {
+				$credit_id = mysqli_insert_id($conn);
+			}
+			else { $credit_id = 0; }
+
+			foreach ($shirts as $shirtorder) {
+				$sql_order_query = "insert into orders ( item, shirt_size, shirt_color, credit_info_id )
+					values ( '{$shirtorder}', '{$size}', '{$color}', {$credit_id} );";
+				
+				$shirt_order_result = mysqli_query($conn,$sql_order_query);
+
+				if (!$shirt_order_result) {
+					break;
+				}
+			}
+			foreach ($cds as $cdorder) {
+				$sql_order_query = "insert into orders ( item, credit_info_id )
+					values ( '{$cdorder}', {$credit_id} );";
+				
+				$cd_order_result = mysqli_query($conn,$sql_order_query);
+
+				if(!$cd_order_result) {
+					break;
+				}
+			}
+
 		?>
     </head>
     <body style="background: url(Images/SickGuitar.jpg);padding: 0px;">
@@ -214,7 +237,6 @@
 
 		<div style="border-color:magenta" class="body_blocks">
 			<h3>Search the database!</h3>
-			<?= $credit_id ?>
 
 			<?php mysqli_close($conn) ?>
 <!--			<form action="databasesearch.php" method="get">
