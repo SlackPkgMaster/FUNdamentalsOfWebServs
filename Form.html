@@ -17,6 +17,15 @@
                     document.getElementById("backgroundImg").style.background = "url(Images/SickGuitar.jpg)";
                 }
             }
+            function changeButtonText(buttonElement) {
+                if (toggleBkg){
+                    buttonElement.innerHTML = "Reset the background";
+                }
+                else
+                {
+                    buttonElement.innerHTML = "Change the background";
+                }
+            }
         </script>
 
         <style>
