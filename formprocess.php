@@ -69,9 +69,6 @@
                 color: aliceblue;
             }
 		</style>
-    </head>
-    <body style="background: url(Images/SickGuitar.jpg);padding: 0px;">
-
 		<?php
 			$server = "localhost";
 			$username = "php";
@@ -167,6 +164,8 @@
 
 					
 		?>
+    </head>
+    <body style="background: url(Images/SickGuitar.jpg);padding: 0px;">
 		<div style="display:flex; margin:0px">
             <!--The cool rocker picture at the heading-->
             <div class="headingimage">
