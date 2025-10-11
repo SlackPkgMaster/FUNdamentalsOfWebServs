@@ -3,6 +3,22 @@
 <html>
     <head>
         <title>Results</title> 
+		<script>
+            var toggleBkg = false;
+            function changeHeaderImg() {
+                document.getElementById("headerImg").src = "Images/Rocker2.jpg";
+            }
+            function changeBackground(newBkg) {
+                toggleBkg = !toggleBkg;
+                if (toggleBkg){
+                    document.getElementById("backgroundImg").style.background = "url(" + newBkg + ")";
+                }
+                else {
+                    document.getElementById("backgroundImg").style.background = "url(Images/SickGuitar.jpg)";
+                }
+            }
+        </script>
+
 		<style>
             @font-face {
                 font-family: ComicSans;
@@ -247,5 +263,7 @@
 					
 			</form> -->
 		</div>
+		<br/>
+        <button class="background_button" onclick="changeBackground('Images/SickVinyl.jpg'); changeButtonText(this)">Change the background</button>
     </body>
 </html>
