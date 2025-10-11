@@ -221,7 +221,7 @@
 
 		<div style="border-color:magenta" class="body_blocks">
 			<h3>Search the database!</h3>
-			<?= $credit_id['id'] ?>
+			<?= var_dump($credit_id); ?>
 
 			<?php mysqli_close($conn) ?>
 <!--			<form action="databasesearch.php" method="get">
