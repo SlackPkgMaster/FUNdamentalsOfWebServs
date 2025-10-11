@@ -164,6 +164,7 @@
 						name='{$credit_name}';";
 			
 			$credit_id = mysqli_query($conn, $sql_credit_id_query);
+
 					
 		?>
 		<div style="display:flex; margin:0px">
@@ -221,7 +222,9 @@
 
 		<div style="border-color:magenta" class="body_blocks">
 			<h3>Search the database!</h3>
-			<?= $credit_id?>
+			<?= $credit_id['id'] ?>
+
+			<?php mysqli_close($conn) ?>
 <!--			<form action="databasesearch.php" method="get">
 				<label for="table" style="margin-left: 10px;">Database:</label>
 					<select id="table" name="table">
