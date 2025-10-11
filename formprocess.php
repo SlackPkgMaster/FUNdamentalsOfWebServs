@@ -179,6 +179,7 @@
 				}
 			}
 
+			mysqli_close($conn);
 		?>
     </head>
     <body style="background: url(Images/SickGuitar.jpg);padding: 0px;">
@@ -237,8 +238,6 @@
 
 		<div style="border-color:magenta" class="body_blocks">
 			<h3>Search the database!</h3>
-
-			<?php mysqli_close($conn) ?>
 <!--			<form action="databasesearch.php" method="get">
 				<label for="table" style="margin-left: 10px;">Database:</label>
 					<select id="table" name="table">
