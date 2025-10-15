@@ -74,6 +74,18 @@
                 border-style:solid;
                 background-color: rgba(240, 248, 255, 0.9);
             }
+            .filter_form {
+				display:flex; 
+				margin:0px;
+				
+			}
+            .filter_form fieldset {
+                border-color: rgb(90, 1, 96);
+                border-style: solid;
+                float:left;
+                height:200px;
+                margin: 50px;
+            }
             button {
                 width:80%;
                 height:25px;
@@ -252,16 +264,46 @@
 			<p>Name on the Card : <?= $credit_name ?> </p>
 		</div>
 
-		<div style="border-color:magenta" class="body_blocks">
+        <div style="border-color:magenta" class="body_blocks">
 			<h3>Search the database!</h3>
-<!--			<form action="databasesearch.php" method="get">
-				<label for="table" style="margin-left: 10px;">Database:</label>
-					<select id="table" name="table">
-						<option value="credit_cards">Credit Cards</option>
-						<option value="orders">Orders</option>
-					</select>
-					
-			</form> -->
+			<div class="filter_form">
+				<form action="databasesearch.php" method="get">
+						<fieldset class="columnsform">
+							<legend>Element you want to see</legend>
+							<input type="checkbox" id="item" name="columns[]" value="item">
+							<label for="item"> Item Name</label><br/>
+							<input type="checkbox" id="shirt_size" name="columns[]" value="shirt_size">
+							<label for="shirt_size"> Shirt Size</label><br/>
+							<input type="checkbox" id="shirt_color" name="columns[]" value="shirt_color">
+							<label for="shirt_color"> Shirt Color</label><br/>
+							<input type="checkbox" id="credit_number" name="columns[]" value="credit_number">
+							<label for="credit_number"> Credit Card Number</label><br/>
+							<input type="checkbox" id="cvv" name="columns[]" value="cvv">
+							<label for="cvv"> Security Number</label><br/>
+							<input type="checkbox" id="exp_month" name="columns[]" value="exp_month">
+							<label for="exp_month"> Expiration Month</label><br/>
+							<input type="checkbox" id="exp_year" name="columns[]" value="exp_year">
+							<label for="exp_year"> Expiration Year</label><br/>
+							<input type="checkbox" id="name" name="columns[]" value="name">
+							<label for="name"> Name on Card</label><br/>
+						</fieldset>
+
+						<fieldset class="filtersform">
+							<legend>Filters</legend>
+							<span>Filter your search</span>
+							<select name="filterelement">
+								<option value="all">No Filter</option>
+								<option value="item">Item Name</option>
+								<option value="exp_month">Expiration Month</option>
+								<option value="exp_year">Expiration Year</option>
+								<option value="name">Name on Card</option>
+							</select>
+							<br/>
+							<label for="filtersearch" style="margin-left: 10px;">Search Term</label>
+							<input type="text" id="filtersearch" name="filtersearch">
+						</fieldset>
+				</form> 
+			</div>
 		</div>
 		<br/>
         <button class="background_button" onclick="changeBackground('Images/SickVinyl.jpg'); changeButtonText(this)">Change the background</button>
