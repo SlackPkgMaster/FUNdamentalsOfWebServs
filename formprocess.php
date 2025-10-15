@@ -301,6 +301,7 @@
 							<br/>
 							<label for="filtersearch" style="margin-left: 10px;">Search Term</label>
 							<input type="text" id="filtersearch" name="filtersearch">
+							<input type="Submit">
 						</fieldset>
 				</form> 
 			</div>
