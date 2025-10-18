@@ -43,9 +43,18 @@
                 $sql_search_query .= " ";
             }
 
+            $sql_search_query .= " from orders inner join credit_cards on orders.credit_card_id = credit_cards.id";
+
+            if ($filter_element != "all"){
+                $sql_search_query .= " where {$filter_element} = '{$filter_search}'";
+            }
+            $sql_search_query .= ";";
+
+            mysqli_close($conn);
         ?> 
     </head>
     <body>
+        <?= $sql_search_query ?>
     </body>
 
 </html>
