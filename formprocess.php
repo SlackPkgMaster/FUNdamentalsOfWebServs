@@ -227,6 +227,7 @@
 		<ul class="navbar">
             <li><a href="index.html">Home</a></li>
             <li><a href="Form.html">Shop</a></li>
+			<li><a href="databasesearch.php">Search</a></li>
         </ul>
 
 		<div style="border-color:purple" class="body_blocks">
