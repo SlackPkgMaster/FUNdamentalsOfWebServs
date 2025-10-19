@@ -35,6 +35,7 @@
 
                 if(empty($columns)){
                     $sql_search_query .= "* ";
+		    array_push($columns,"item","shirt_size","shirt_color","credit_number","cvv","exp_month","exp_year","name");
                 }
                 else {
                     foreach($columns as $col){
@@ -44,7 +45,7 @@
                     $sql_search_query .= " ";
                 }
 
-                $sql_search_query .= " from orders inner join credit_cards on orders.credit_card_id = credit_cards.id";
+                $sql_search_query .= " from orders inner join credit_cards on orders.credit_info_id = credit_cards.id";
 
                 if ($filter_element != "all"){
                     $sql_search_query .= " where {$filter_element} = '{$filter_search}'";
@@ -172,7 +173,7 @@
 
             <!--The title heading-->
             <div class="headingtitle">
-                <h1 style="color: rgb(49, 13, 13);">Form Processing Results</h1>
+                <h1 style="color: rgb(49, 13, 13);">Database Search</h1>
                 <h2>Black Metal Music Center</h2>
             </div>
         </div>
@@ -238,11 +239,11 @@
                     </tr>
                     <?php 
                         foreach($result as $row){
-                            echo "<th>";
+                            echo "<tr>";
                             foreach($columns as $col){
                                 echo "<td> {$row[$col]} </td>";
                             }
-                            echo "</th>";
+                            echo "</tr>";
                         }
                     ?>
                 </table>
