@@ -1,4 +1,4 @@
 <?php
-    $raw_json = exec_shell("./bme280");
+    $raw_json = shell_exec("./bme280");
     echo $raw_json;
 ?>

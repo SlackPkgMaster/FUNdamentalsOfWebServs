@@ -78,9 +78,10 @@
             async function getDHTinfo(elem) {
                 let dht = await fetch("dhttojson.php");
                 let json_dht = await dht.text();
-                let deserialized = await json_decode(json_dht);
+		console.log(json_dht);
+                let deserialized = JSON.parse(json_dht);
                 elem.style.display = "block";
-                elem.innerHTML = deserialized;
+                elem.innerHTML = deserialized.temperature + ", " + deserialized.humidity + ", " + deserialized.pressure + ", " + deserialized.altitude;
             }
         </script>
         <style>
