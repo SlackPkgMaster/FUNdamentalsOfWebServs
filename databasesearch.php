@@ -5,7 +5,7 @@
         <title>Database Search Results</title>
         <?php
             if(!empty($_GET)){
-                $led = int(isset($_GET['led']));
+                $led = (int)isset($_GET['led']);
 
                 shell_exec("gpio write 0 {$led}");
 
