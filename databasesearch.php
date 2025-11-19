@@ -76,7 +76,8 @@
                 }
             }
             async function getDHTinfo(elem) {
-                let json_dht = await fetch("dhttojson.php").text();
+                let dht = await fetch("dhttojson.php");
+                let json_dht = await dht.text();
                 let deserialized = await json_decode(json_dht);
                 elem.style.display = "block";
                 elem.innerHTML = deserialized;
