@@ -5,6 +5,10 @@
         <title>Database Search Results</title>
         <?php
             if(!empty($_GET)){
+                $led = int(isset($_GET['led']));
+
+                shell_exec("gpio write 0 {$led}");
+
                 $server = "localhost";
                 $username = "php";
                 $password = "Ross1234";
@@ -35,7 +39,7 @@
 
                 if(empty($columns)){
                     $sql_search_query .= "* ";
-		    array_push($columns,"item","shirt_size","shirt_color","credit_number","cvv","exp_month","exp_year","name");
+		            array_push($columns,"item","shirt_size","shirt_color","credit_number","cvv","exp_month","exp_year","name");
                 }
                 else {
                     foreach($columns as $col){
@@ -205,6 +209,12 @@
 							<label for="exp_year"> Expiration Year</label><br/>
 							<input type="checkbox" id="name" name="columns[]" value="name">
 							<label for="name"> Name on Card</label><br/>
+						</fieldset>
+
+                        <fieldset>
+							<legend>Toggle LED</legend>
+							<input type="checkbox" id="led" name="led" value="1">
+							<label for="led">Toggle that LED!</label>
 						</fieldset>
 
 						<fieldset class="filtersform">

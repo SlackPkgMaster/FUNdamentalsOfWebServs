@@ -289,6 +289,12 @@
 							<label for="name"> Name on Card</label><br/>
 						</fieldset>
 
+						<fieldset>
+							<legend>Toggle LED</legend>
+							<input type="checkbox" id="led" name="led" value="1">
+							<label for="led">Toggle that LED!</label>
+						</fieldset>
+
 						<fieldset class="filtersform">
 							<legend>Filters</legend>
 							<span>Filter your search</span>
