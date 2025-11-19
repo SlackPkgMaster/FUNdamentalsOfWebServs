@@ -75,6 +75,12 @@
                     document.getElementById("backgroundImg").style.background = "url(Images/SickGuitar.jpg)";
                 }
             }
+            async function getDHTinfo(elem) {
+                let json_dht = await fetch("dhttojson.php").text();
+                let deserialized = await json_decode(json_dht);
+                elem.style.display = "block";
+                elem.innerHTML = deserialized;
+            }
         </script>
         <style>
             @font-face {
@@ -264,6 +270,13 @@
 
         <br/>
         <button class="background_button" onclick="changeBackground('Images/SickVinyl.jpg'); changeButtonText(this)">Change the background</button>
+        <br/>
+        <button onclick="getDHTinfo(document.getElementById('dht_block'))">Get temp info</button>
+        <div style="border-color:rgb(200, 107, 228); display:none;" id="dht_block" class="body_blocks">
+            <h3>Temperature Results</h3>
+            <p>
+            </p>
+        </div>
     </body>
 
 </html>
