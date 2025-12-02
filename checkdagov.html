@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Get government Info</title>
+        <script>
+            var toggleBkg = false;
+            function changeHeaderImg() {
+                document.getElementById("headerImg").src = "Images/Rocker2.jpg";
+            }
+            function changeBackground(newBkg) {
+                toggleBkg = !toggleBkg;
+                if (toggleBkg){
+                    document.getElementById("backgroundImg").style.background = "url(" + newBkg + ")";
+                }
+                else {
+                    document.getElementById("backgroundImg").style.background = "url(Images/SickGuitar.jpg)";
+                }
+            }
+            function changeButtonText(buttonElement) {
+                if (toggleBkg){
+                    buttonElement.innerHTML = "Reset the background";
+                }
+                else
+                {
+                    buttonElement.innerHTML = "Change the background";
+                }
+            }
+        </script>
+
+        <style>
+            @font-face {
+                font-family: ComicSans;
+                src: url(Fonts/ComicRelief-Regular.ttf);
+            }
+            h1,h2,h3 {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            .headingimage {
+                height: 120px; 
+                width: 10%; 
+                float: left; 
+                margin:0px;
+            }
+            .headingtitle {
+                height: 120px; 
+                background-color: rgba(139, 0, 0, 0.95); 
+                width: 90%; 
+                float:left; 
+                margin:0px;
+            }
+            .headingtitle h1,h2 {
+                text-align: center;
+            }
+            .navbar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: rgba(127, 127, 127, 0.7);
+            }
+            .navbar li {
+                float: left;
+                font-family: ComicSans;
+            }
+            .navbar li a {
+                display: block;
+                color: rgb(164, 11, 11);
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            ul li a:hover {
+                color: crimson;
+                background-color: #111111;
+            }
+            .body_blocks{
+                width:80%;
+                margin:auto;
+                margin-top:25px;
+                margin-bottom:25px;
+                padding: 10px 20px;
+                border-style:solid;
+                background-color: rgba(240, 248, 255, 0.9);
+            }
+            button {
+                width:80%;
+                height:25px;
+                display: block;
+                margin: 0 auto;
+            }
+            button:hover {
+                background-color: rgb(55, 55, 55);
+                color: aliceblue;
+            }
+        </style>
+    </head>
+    <body style="background: url(Images/SickGuitar.jpg);padding: 0px;" id="backgroundImg">
+
+        <div style="display:flex; margin:0px">
+            <!--The cool rocker picture at the heading-->
+            <div class="headingimage">
+                <img id="headerImg" src="Images/Rocker.jpg" style="height:100%; width:100%" onclick="changeHeaderImg()"/>
+            </div>
+
+            <!--The title heading-->
+            <div class="headingtitle">
+                <h1 style="color: rgb(49, 13, 13);"> Welcome to The Jungle</h1>
+                <h2>Check The Government</h2>
+            </div>
+        </div>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Form.html">Shop</a></li>
+            <li><a href="databasesearch.php">Search</a></li>
+            <li><a href="checkdagov.html">Gov Check</a></li>
+        </ul>
+
+        <div class="body_blocks" style="border-color: rgb(255, 143, 143)">
+            <h3>Keep track of government spending</h3>
+            <p>
+                As true metal heads, we hate the government. This is why we need to surveil it
+                and make sure they don't steal our epic CDs that are second-hand and also crusty.
+                Make sure to check our epic government surveillance system here below.
+            </p>
+        </div>
+
+</html>
