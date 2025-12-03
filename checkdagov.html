@@ -3,7 +3,9 @@
 <html>
     <head>
         <title>Get government Info</title>
+        <script src="papaparse.min.js"></script>
         <script>
+
             var toggleBkg = false;
             function changeHeaderImg() {
                 document.getElementById("headerImg").src = "Images/Rocker2.jpg";
@@ -25,6 +27,13 @@
                 {
                     buttonElement.innerHTML = "Change the background";
                 }
+            }
+            async function getCanadaInfo() {
+                let res = await fetch('https://open.canada.ca/data/en/api/3/action/datastore_search?resource_id=8282db2a-878f-475c-af10-ad56aa8fa72c&limit=5');
+                let json_raw = await res.text();
+                
+                let data = JSON.parse(json_raw);
+                document.getElementById("data_info").innerHTML = da;
             }
         </script>
 
@@ -125,4 +134,13 @@
             </p>
         </div>
 
+        <div class="body_blocks" style="border-color: rgb(250, 94, 94)">
+            <p id="data_info"></p>
+        </div>
+
+        <br/>
+        <button class="background_button" onclick="changeBackground('Images/SickVinyl.jpg'); changeButtonText(this)">Change the background</button>
+        <br/>
+        <button onclick="getCanadaInfo()">Get Canada info</button>
+    </body>
 </html>
